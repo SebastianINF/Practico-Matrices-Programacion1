@@ -25,6 +25,8 @@ namespace Practico_Matrices_Programación_1
         }
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+                return;
             M1.Cargar(int.Parse(textBox1.Text), int.Parse(textBox2.Text), int.Parse(textBox3.Text), int.Parse(textBox4.Text));
         }
 
@@ -45,7 +47,22 @@ namespace Practico_Matrices_Programación_1
 
         private void verificarSiLosElementosDe1EstánEn2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Estan todos los elementos? : {M1.VerificarSiM1EstaEnM2(ref M2)}!!!");
+            if(M1.c == 0 && M2.f == 0)
+            {
+                MessageBox.Show("Cargue La Matriz 1");
+                return;
+            }
+            else if (M2.c == 0 && M2.f == 0)
+            {
+                MessageBox.Show("Cargue La Matriz 2");
+                return;
+            }
+            if(textBox5.Text == "" || textBox6.Text == "")
+            {
+                MessageBox.Show("Descargue La Matriz 1 y La Matriz 2");
+                return;
+            }
+            MessageBox.Show($"Estan todos los elementos? : {M1.VerificarSiM1EstaEnM2(ref M2)}");
         }
 
         private void ordenarFilasPorNumeroDePrimosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,6 +135,8 @@ namespace Practico_Matrices_Programación_1
 
         private void cargarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+                return;
             M2.Cargar(int.Parse(textBox1.Text), int.Parse(textBox2.Text), int.Parse(textBox3.Text), int.Parse(textBox4.Text));
         }
 

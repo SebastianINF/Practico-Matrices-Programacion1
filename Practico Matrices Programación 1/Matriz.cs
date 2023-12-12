@@ -13,11 +13,10 @@ namespace Practico_Matrices_Programación_1
 
         public Matriz()
         {
-            v = new int[50, 50];
+            v = new int[100, 100];
             f = 0;
             c = 0;
         }
-
         public void Cargar(int nf, int nc, int a, int b)
         {
             f = nf;
@@ -36,7 +35,6 @@ namespace Practico_Matrices_Programación_1
                 }
             }
         }
-
         public string Descargar()
         {
             int f1, c1;
@@ -57,7 +55,6 @@ namespace Practico_Matrices_Programación_1
 
             return s;
         }
-
         // Ejercicio 1
         public string AcumularPrimos()
         {
@@ -93,7 +90,6 @@ namespace Practico_Matrices_Programación_1
 
             return s;
         }
-
         // Ejercicio 2 contar Elementos no repetidos
         public int ContarElementosNoRepetidos()
         {
@@ -110,7 +106,6 @@ namespace Practico_Matrices_Programación_1
             }
             return contador;
         }
-
         public int Frecuencia(int elemento)
         {
             int frec;
@@ -129,7 +124,6 @@ namespace Practico_Matrices_Programación_1
             }
             return frec;
         }
-
         // Ejercicio 3
         public bool VerificarPertenencia(int ele)
         {
@@ -146,7 +140,6 @@ namespace Practico_Matrices_Programación_1
 
             return false;
         }
-
         public bool VerificarSiM1EstaEnM2(ref Matriz M2)
         {
             int f1, c1;
@@ -196,7 +189,6 @@ namespace Practico_Matrices_Programación_1
 
             return count;
         }
-
         public void AñadirPrimosColumna()
         {
             int c1;
@@ -206,7 +198,6 @@ namespace Practico_Matrices_Programación_1
             }
             f++;
         }
-
         public void OrdenarColumnaPrimos()
         {
             int p, d;
@@ -219,7 +210,6 @@ namespace Practico_Matrices_Programación_1
                 }
             }
         }
-
         // Ejercicio 5
         public void OrdenarPorFrecuencia()
         {
@@ -243,7 +233,6 @@ namespace Practico_Matrices_Programación_1
                 }
             }
         }
-
         // Ejercicio 6
         public void IntercalarFibonacciYNoFibonacci()
         {
@@ -320,7 +309,6 @@ namespace Practico_Matrices_Programación_1
                 }
             }
         }
-
         // Ejercicio 7
         public void OrdenarTriangularSuperiorDerecha()
         {
@@ -349,62 +337,6 @@ namespace Practico_Matrices_Programación_1
             }
         }
         // Ejercicio 8
-        public void OrdenarTriangularInferiorIzquierda()
-        {
-            int f1, c1, f2, c2, inc;
-
-            for (f1 = 2; f1 <= f; f1++)
-            {
-                for (c1 = 1; c1 <= f1 - 1; c1++)
-                {
-                    for (f2 = f1; f2 <= f; f2++)
-                    {
-                        if(f1 == f2)
-                        {
-                            inc = c1;
-                        }
-                        else
-                        {
-                            inc = 1;
-                        }
-                        for (c2 = inc; c2 <= f2 - 1; c2++)
-                        {
-                            if (v[f1, c1] > v[f2, c2])
-                                Intercambiar(f2, c2, f1, c1);
-                        }
-                    }
-                }
-            }
-        }
-        public void SegmentarParYNoParTriangularInferiorIzquierda()
-        {
-            int f1, c1, f2, c2;
-            NEnt n1, n2;
-
-            n1 = new NEnt(); n2 = new NEnt();
-
-            for (f1 = 2; f1 <= f; f1++)
-            {
-                for (c1 = 1; c1 <= f1 - 1; c1++)
-                {
-                    for (f2 = f1; f2 <= f; f2++)
-                    {
-                        for (c2 = c1; c2 <= f2 - 1; c2++)
-                        {
-                            n1.Cargar(v[f1, c1]);
-                            n2.Cargar(v[f2, c2]);
-
-                            if (n2.VerificarPar() && !n1.VerificarPar() ||
-                                n2.VerificarPar() && n1.VerificarPar() && v[f2, c2] < v[f1, c1] ||
-                               !n2.VerificarPar() && !n1.VerificarPar() && v[f2, c2] < v[f1, c1])
-                            {
-                                Intercambiar(f2, c2, f1, c1);
-                            }
-                        }
-                    }
-                }
-            }
-        }
         public void SegmentarParYNoParDeLaTriangularInferiorDerecha()
         {
             int f1, c1, f2, c2;
@@ -435,27 +367,6 @@ namespace Practico_Matrices_Programación_1
             }
         }
         // Ejercicio 9
-        public void OrdenarDiagonalPrincipal()
-        {
-            int f1, c1, f2, c2;
-
-            for(f1 = 1; f1 <= f; f1++)
-            {
-                for(c1 = 1; c1 <= c; c1++)
-                {
-                   for(f2 = f1; f2 <= f; f2++)
-                    {
-                        for(c2 = c1; c2 <= c; c2++)
-                        {
-                            if(c1 == f1 && c2 == f2 && v[f1,c1] > v[f2,c2])
-                            {
-                                Intercambiar(f1, c1, f2, c2);
-                            }
-                        }
-                    } 
-                }
-            }
-        }
         public void OrdenarDiagonalSecundaria()
         {
             int f1, c1, f2, c2;
@@ -477,7 +388,6 @@ namespace Practico_Matrices_Programación_1
                 }
             }
         }
-        
         // Ejercicio 10
         public int EncontrarElementoMayorFila(int nf,int  init)
         {
@@ -508,10 +418,5 @@ namespace Practico_Matrices_Programación_1
             c++;
         }
         // Fin del practico :)
-
-        // METODOS CREADOS SIN UTIZAR: 
-        // OrdenarTriangularInferiorIzquierda
-        // SegmentarParYNoParDeLaTriangularInferiorIzquierda
-        // Ordenar Diagonal Principal
     }
 }

@@ -36,6 +36,7 @@
             this.contarElementosNoRepetidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verificarSiLosElementosDe1EstánEn2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenarFilasPorNumeroDePrimosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenarPorFrecuenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.intercalarFibonacciYNoFibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenarTriangularSuperiorDerechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.segmentarParYNoParTriangularInferiorDerechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +57,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.ordenarPorFrecuenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +123,7 @@
             // 
             this.verificarSiLosElementosDe1EstánEn2ToolStripMenuItem.Name = "verificarSiLosElementosDe1EstánEn2ToolStripMenuItem";
             this.verificarSiLosElementosDe1EstánEn2ToolStripMenuItem.Size = new System.Drawing.Size(528, 26);
-            this.verificarSiLosElementosDe1EstánEn2ToolStripMenuItem.Text = "3. Verificar Si Los Elementos De 1 Están En 2";
+            this.verificarSiLosElementosDe1EstánEn2ToolStripMenuItem.Text = "3. Verificar Si Todos Los Elementos De M1 Están En M2";
             this.verificarSiLosElementosDe1EstánEn2ToolStripMenuItem.Click += new System.EventHandler(this.verificarSiLosElementosDe1EstánEn2ToolStripMenuItem_Click);
             // 
             // ordenarFilasPorNumeroDePrimosToolStripMenuItem
@@ -132,6 +132,13 @@
             this.ordenarFilasPorNumeroDePrimosToolStripMenuItem.Size = new System.Drawing.Size(528, 26);
             this.ordenarFilasPorNumeroDePrimosToolStripMenuItem.Text = "4. Ordenar Filas Por Numero De Primos";
             this.ordenarFilasPorNumeroDePrimosToolStripMenuItem.Click += new System.EventHandler(this.ordenarFilasPorNumeroDePrimosToolStripMenuItem_Click);
+            // 
+            // ordenarPorFrecuenciaToolStripMenuItem
+            // 
+            this.ordenarPorFrecuenciaToolStripMenuItem.Name = "ordenarPorFrecuenciaToolStripMenuItem";
+            this.ordenarPorFrecuenciaToolStripMenuItem.Size = new System.Drawing.Size(528, 26);
+            this.ordenarPorFrecuenciaToolStripMenuItem.Text = "5. Ordenar Por Frecuencia";
+            this.ordenarPorFrecuenciaToolStripMenuItem.Click += new System.EventHandler(this.ordenarPorFrecuenciaToolStripMenuItem_Click);
             // 
             // intercalarFibonacciYNoFibonacciToolStripMenuItem
             // 
@@ -214,7 +221,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(567, 114);
+            this.textBox4.Location = new System.Drawing.Point(554, 114);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 22);
             this.textBox4.TabIndex = 4;
@@ -274,7 +281,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(564, 85);
+            this.label5.Location = new System.Drawing.Point(551, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 17);
             this.label5.TabIndex = 11;
@@ -289,13 +296,6 @@
             this.button1.Text = "Reseteo Rapido";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ordenarPorFrecuenciaToolStripMenuItem
-            // 
-            this.ordenarPorFrecuenciaToolStripMenuItem.Name = "ordenarPorFrecuenciaToolStripMenuItem";
-            this.ordenarPorFrecuenciaToolStripMenuItem.Size = new System.Drawing.Size(528, 26);
-            this.ordenarPorFrecuenciaToolStripMenuItem.Text = "5. Ordenar Por Frecuencia";
-            this.ordenarPorFrecuenciaToolStripMenuItem.Click += new System.EventHandler(this.ordenarPorFrecuenciaToolStripMenuItem_Click);
             // 
             // Form1
             // 
